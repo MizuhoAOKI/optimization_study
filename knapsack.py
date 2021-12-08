@@ -45,10 +45,11 @@ for i, d in enumerate(dp[N]):
 print(f"Maximum value is {maxv}")
 
 # Plog figure
-fig = plt.figure(figsize=(16,9))
-ax = fig.add_subplot(111, frameon=True, xticks=[], yticks=[])
+fig = plt.figure(figsize=(10,3))
+ax = fig.add_subplot(111, frameon=False, xticks=[], yticks=[])
 # prepare color map
 normal = colors.Normalize(0, L)
 colours = plt.cm.hot_r(normal(dp))
 the_table=plt.table(cellText=dp, loc='center', rowLabels=range(N+1), colLabels=range(L+1), cellColours=colours)
+plt.savefig("./results/knapsack_dp.png")
 plt.show()
