@@ -2,7 +2,6 @@
 """ Problem : 
 Ref : https://qiita.com/keisuke-ota/items/504d66092671a67c1040
 """
-
 import math
 from matplotlib import pyplot as plt
 from matplotlib import colors
@@ -47,6 +46,8 @@ print(f"Maximum value is {maxv}")
 # Plog figure
 fig = plt.figure(figsize=(10,3))
 ax = fig.add_subplot(111, frameon=False, xticks=[], yticks=[])
+fig.suptitle('DP table')
+
 # prepare color map
 normal = colors.Normalize(0, L)
 colours = plt.cm.hot_r(normal(dp))
